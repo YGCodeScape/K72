@@ -1,8 +1,13 @@
 import React from 'react'
+import Video from '../components/Home/video'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <div className="h-screen w-screen bg-red-700">
+        <Video />
+      </div>
+    </div>
   )
 }
 

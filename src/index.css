@@ -7,4 +7,5 @@
   font-family: var(--font-san);
      text-transform: uppercase;
      font-weight: 600; 
+     letter-spacing: 3px;
  }

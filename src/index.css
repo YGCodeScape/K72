@@ -9,3 +9,6 @@
      font-weight: 600; 
      letter-spacing: 3px;
  }
+ .home-b-t {
+      font-family: var(--font-san);
+ }

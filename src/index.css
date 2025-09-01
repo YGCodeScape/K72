@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+* {
+    --font-san: "Sansation", sans-serif;
+}
+ .hero-t {
+  font-family: var(--font-san);
+     text-transform: uppercase;
+     font-weight: 600; 
+ }

@@ -1,10 +1,22 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import React, { useRef } from 'react'
 
 const Agency = () => {
+  const imageDivRef = useRef(null)
+
+  useGSAP(function() {
+    gsap.to(imageDivRef.current, function() {
+    
+    })
+  })
+
+
+
   return (
     <div className="ag-p1-container">
         <div className='ag-p1-sec-1'>
-            <div className="ag-p1-img-div h-70 w-52 absolute top-[20%] left-[30%] rounded-[1rem] overflow-hidden">
+            <div ref={imageDivRef} className="ag-p1-img-div h-70 w-52 absolute top-[20%] left-[30%] rounded-[1rem] overflow-hidden">
                <img className='h-full w-full object-cover' src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg" alt="" />
             </div>
             <div className="ag-p1-text relative">

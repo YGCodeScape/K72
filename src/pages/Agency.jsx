@@ -2,8 +2,11 @@ import React from 'react'
 
 const Agency = () => {
   return (
-    <div className='Agency-container'>
-      <div className="ag-p1">
+    <div className='Agency-p1-container'>
+      <div className="ag-p1-img-div h-70 w-52 absolute top-[20%] left-[30%] rounded-[1rem] -z-2 bg-red-700 ">
+        {/* <img src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg" alt="" /> */}
+      </div>
+      <div className="ag-p1-text">
          <div className=" mt-[50vh]">
              <h1 className='text-[19.5vw] uppercase leading-[16.5vw] text-center font-[700]'>Soixan7t <br/>Twelve
              </h1>

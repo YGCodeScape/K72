@@ -27,8 +27,8 @@ const Agency = () => {
             </div>
         </div>
 
-        <div className='ag-p1-sec-2'>
-          
+        <div className='ag-p1-sec-2 h-screen'>
+
         </div>
     </div>
   )

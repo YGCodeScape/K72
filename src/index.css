@@ -3,6 +3,10 @@
 * {
     --font-san: "Sansation", sans-serif;
 }
+*::selection {
+    background-color: #D3FD50;
+    color: #000;
+}
 
 body {
     margin: 0;

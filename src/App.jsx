@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Agence from './pages/Agence'
-import Works from './pages/Works'
+import Agency from './pages/Agency'
+import Projects from './pages/Projects'
 
 const App = () => {
   return (
@@ -13,8 +13,8 @@ const App = () => {
       
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/agence' element={<Agence />} />
-        <Route path='/works' element={<Works />} />
+        <Route path='/agency' element={<Agency />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
     </div>
   )

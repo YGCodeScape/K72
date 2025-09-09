@@ -3,8 +3,10 @@
 * {
     --font-san: "Sansation", sans-serif;
 }
+
 body {
-    overflow-x: hidden;
+    margin: 0;
+    padding : 0;
 }
  .hero-t {
   font-family: var(--font-san);

@@ -30,13 +30,17 @@ const Agency = () => {
     gsap.to(imageDivRef.current, {
        scrollTrigger: {
           trigger: imageDivRef.current,
-          markers:true,
           start: "top 20%",
-          end: "top -170%",
+          end: "top -180%",
           pin: true,
           onUpdate:(elem)=>  {
-             const imageIndex = Math.floor(elem.progress * imageArray.length)
-             console.log(imageArray[imageIndex])
+             let imageIndex;
+             if(elem.progress<1) {
+                 imageIndex = Math.floor(elem.progress * imageArray.length)
+             }
+             else {
+               imageIndex = imageArray.length - 1
+             }
              imageRef.current.src = imageArray[imageIndex]
           }
        }

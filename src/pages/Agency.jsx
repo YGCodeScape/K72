@@ -67,8 +67,16 @@ const Agency = () => {
                    </p>
                 </div>
             </div>
-            <div className=' h-[90vh] w-full bg-red-900 mt-[6rem]'>
-                
+            <div className=' h-[90vh] w-[100%] flex flex-col mt-[8rem] pl-[9rem] gap-[9rem]'>
+                <div className='w-[100%] flex flex-row items-center gap-[4.1rem]'>
+                   <span className='text-[1.2rem] font-[500] leading-[4.5vh] w-[27%]'>Espertise</span>
+                   <span className='text-[1.2rem] font-[500] leading-[4.5vh] w-[27%]'>Strategy<br />Advertising<br />Branding<br />Design<br />Content</span>
+                </div>
+                <div className='w-[100%] flex flex-row items-center gap-[3rem]'>
+                   <span className='text-[1.2rem] font-[500] leading-[4.5vh] w-[27%]'>Our Work_ Born in curiosity, raised by dedication and fed with a steady diet of creativity.</span>
+                   <span className='text-[1.2rem] font-[500] leading-[4.5vh] w-[27%]'>Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves.</span>
+                   <span className='text-[1.2rem] font-[500] leading-[4.5vh] w-[27%]'>Our Culture_ We're open to each other. Period. The team works together to create a space that makes us proud.</span>
+                </div>
             </div>
         </div>
 

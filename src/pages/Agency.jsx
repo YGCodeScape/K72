@@ -1,13 +1,23 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 import React, { useRef } from 'react'
 
 const Agency = () => {
+
+  gsap.registerPlugin(ScrollTrigger)
   const imageDivRef = useRef(null)
 
   useGSAP(function() {
-    gsap.to(imageDivRef.current, function() {
-    
+    gsap.to(imageDivRef.current, {
+       scrollTrigger: {
+          trigger: imageDivRef.current,
+          markers:true,
+          start: "top 20%",
+          end: "top -170%",
+          pin: true,
+          scrub: true
+       }
     })
   })
 

@@ -67,6 +67,9 @@ const Agency = () => {
                    </p>
                 </div>
             </div>
+            <div className=' h-[90vh] w-full bg-red-900 mt-[6rem]'>
+                
+            </div>
         </div>
 
         <div className='ag-p1-sec-2 h-screen'>

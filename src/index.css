@@ -9,15 +9,6 @@
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    width: 13px;
-    background-color: #000;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(94, 94, 94);
-    border-radius: 8px;
-}
 
 body {
     margin: 0;
@@ -37,3 +28,8 @@ body {
      font-family: "Fira Sans", sans-serif;
      font-weight: 600;
  }
+ .menu-d {
+    color: white;
+    cursor: pointer;
+ }
+

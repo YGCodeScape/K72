@@ -1,9 +1,38 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import React, { useRef } from 'react'
 
 const FullScreenNav = () => {
+
+   const fullNavLinkRef = useRef(null)
+
+  useGSAP(function(){
+    const tl = gsap.timeline()
+    tl.from('.stairTwo', {
+        delay: 1,
+      height: 0,
+      stagger: {
+        amount: -0.25
+      }
+    })
+    tl.from(fullNavLinkRef.current, {
+        opacity: 0
+    })
+  })
+
   return (
     <div className="full-nav h-screen w-full absolute bg-black overflow-hidden">
-        <div className="cross-d flex w-full justify-between item-start border-2 relative">
+         <div className='h-screen w-full fixed'>
+             <div className="lod-boxes h-screen w-full flex">
+                 <div className="stairTeo h-full w-1/5 bg-red-700"></div>
+                 <div className="stairTwo h-full w-1/5 bg-red-700"></div>
+                 <div className="stairTwo h-full w-1/5 bg-red-700"></div>
+                 <div className="stairTwo h-full w-1/5 bg-red-700"></div>
+                 <div className="stairTwo h-full w-1/5 bg-red-700"></div>
+             </div>
+         </div>
+         <div ref={fullNavLinkRef} className='relative'>
+             <div className="cross-d flex w-full justify-between item-start relative">
              <div className=' p-2 '>
                 <div className=' w-24'>
                     <svg className=' w-full' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 44">
@@ -15,77 +44,78 @@ const FullScreenNav = () => {
                 <div className='cross-bar h-[25vh] w-[0.2rem] bg-white rounded-full -rotate-45 '></div>
                 <div className='cross-bar h-[25vh] w-[0.2rem] bg-white rounded-full rotate-45 '></div>
             </div>
-        </div>
-        <div className="fn-tags py-7">
-            <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
-                 <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>work</h1>
-                 <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                     </div>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                     </div>
-                 </div>
-            </div>
-            <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
-                 <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>agency</h1>
-                 <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                     </div>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+             </div>
+             <div className="fn-tags py-7">
+                 <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
+                     <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>work</h1>
+                     <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
                      </div>
                  </div>
-            </div>
-            <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
-                 <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>contact</h1>
-                 <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                     </div>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                     </div>
-                 </div>
-            </div>
-            <div className="Fn-tag relative cursor-pointer border-y-1 border-gray-300">
-                 <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>blog</h1>
-                 <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                     </div>
-                     <div className="moveX tag-slider flex items-center">
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                         <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
-                         <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                 <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
+                     <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>agency</h1>
+                     <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
                      </div>
                  </div>
-            </div>
-        </div>
+                 <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
+                     <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>contact</h1>
+                     <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
+                     </div>
+                 </div>
+                 <div className="Fn-tag relative cursor-pointer border-y-1 border-gray-300">
+                     <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>blog</h1>
+                     <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
+                         <div className="moveX tag-slider flex items-center">
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
+                             <h2 className='text-[6.5rem] uppercase font-[600] text-black leading-26 text-center whitespace-nowrap' >See everything</h2>
+                             <img className=' h-[13vh] shrink-0 w-[18vw] rounded-full object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
     </div>
   )
 }

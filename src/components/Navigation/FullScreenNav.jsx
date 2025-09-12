@@ -74,7 +74,7 @@ const FullScreenNav = () => {
             </div>
         </div>
     </div>
-  )cd 
+  )
 }
 
 export default FullScreenNav

@@ -19,3 +19,8 @@
              </div>
         </div>
     </div>
+
+
+                <div className='cross-bar h-full w-[0.3rem] bg-red-800 rounded-full rotate-180'></div>
+                <div className='cross-bar h-full w-[0.3rem] bg-red-800 rounded-full rotate-180'></div>
+            </div>

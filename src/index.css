@@ -53,6 +53,11 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
+.cross-i:hover .cross-bar {
+    background-color: #D3FD50;
+}
+
 @keyframes moveAnimation {
     from {
         transform: translateX(0);

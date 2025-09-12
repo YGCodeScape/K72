@@ -11,9 +11,9 @@ const FullScreenNav = () => {
                     </svg>
                 </div>
             </div>
-            <div className='h-30 w-30 bg-amber-50 absolute top-0 right-0 cursor-pointer'>
-                <div></div>
-                <div></div>
+            <div className='cross-i h-30 w-30 absolute flex justify-center items-center top-0 right-0 cursor-pointer'>
+                <div className='cross-bar h-[25vh] w-[0.2rem] bg-white rounded-full -rotate-45 '></div>
+                <div className='cross-bar h-[25vh] w-[0.2rem] bg-white rounded-full rotate-45 '></div>
             </div>
         </div>
         <div className="fn-tags py-7">

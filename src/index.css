@@ -37,6 +37,14 @@ body {
      font-family: var(--font-san);
 }
 
+.fn-slider {
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+.Fn-tag:hover .fn-slider {
+    opacity: 1;
+}
+
 .moveX {
     animation-duration: 10s;
     animation-name: moveAnimation;

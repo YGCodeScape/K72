@@ -44,7 +44,9 @@ body {
 .Fn-tag:hover .fn-slider {
     opacity: 1;
 }
-
+.Fn-tag:hover {
+    border: none;
+}
 .moveX {
     animation-duration: 10s;
     animation-name: moveAnimation;

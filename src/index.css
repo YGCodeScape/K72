@@ -2,6 +2,7 @@
 
 * {
     --font-san: "Sansation", sans-serif;
+    --font-fira: "Fira Sans", sans-serif;
 }
 *::selection {
     background-color: #D3FD50;
@@ -25,11 +26,13 @@ body {
       font-weight: 900;
  }
  .A-f-div  h1{
-     font-family: "Fira Sans", sans-serif;
+     font-family: var(--font-fira);
      font-weight: 600;
  }
  .menu-d {
     color: white;
     cursor: pointer;
  }
-
+.Fn-tag {
+     font-family: var(--font-san);
+}

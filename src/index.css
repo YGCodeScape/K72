@@ -36,3 +36,18 @@ body {
 .Fn-tag {
      font-family: var(--font-san);
 }
+
+.moveX {
+    animation-duration: 10s;
+    animation-name: moveAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes moveAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

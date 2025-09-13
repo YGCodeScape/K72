@@ -18,6 +18,13 @@ const FullScreenNav = () => {
     tl.from(fullNavLinkRef.current, {
         opacity: 0
     })
+    tl.from('.Fn-tag', {
+        opacity: 0,
+        rotateX: 100,
+      stagger: {
+        amount: -0.2
+      }
+    })
   })
 
   return (
@@ -46,7 +53,7 @@ const FullScreenNav = () => {
             </div>
              </div>
              <div className="fn-tags py-7">
-                 <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
+                 <div className="Fn-tag origin-top relative cursor-pointer border-t-1 border-gray-300">
                      <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>work</h1>
                      <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
                          <div className="moveX tag-slider flex items-center">
@@ -63,7 +70,7 @@ const FullScreenNav = () => {
                          </div>
                      </div>
                  </div>
-                 <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
+                 <div className="Fn-tag origin-top relative cursor-pointer border-t-1 border-gray-300">
                      <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>agency</h1>
                      <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
                          <div className="moveX tag-slider flex items-center">
@@ -80,7 +87,7 @@ const FullScreenNav = () => {
                          </div>
                      </div>
                  </div>
-                 <div className="Fn-tag relative cursor-pointer border-t-1 border-gray-300">
+                 <div className="Fn-tag origin-top relative cursor-pointer border-t-1 border-gray-300">
                      <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>contact</h1>
                      <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
                          <div className="moveX tag-slider flex items-center">
@@ -97,7 +104,7 @@ const FullScreenNav = () => {
                          </div>
                      </div>
                  </div>
-                 <div className="Fn-tag relative cursor-pointer border-y-1 border-gray-300">
+                 <div className="Fn-tag origin-top relative cursor-pointer border-y-1 border-gray-300">
                      <h1 className='text-[6.5rem] uppercase font-[600] text-white leading-26 text-center'>blog</h1>
                      <div className='fn-slider absolute flex top-0 bg-[#D3FD50]'>
                          <div className="moveX tag-slider flex items-center">
